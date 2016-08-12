@@ -3,6 +3,11 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var OUT_DIR = './build';
 
+gulp.task('copy', () => {
+  return gulp.src('./src/assets/**/*')
+    .pipe(gulp.dest(`${OUT_DIR}/assets`));
+});
+
 gulp.task('pug', () => {
   return gulp.src('./src/index.pug')
     .pipe(pug({}))
@@ -15,6 +20,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(OUT_DIR));
 });
 
-gulp.task('default', ['pug', 'sass'], () => {
-  gulp.watch('./src/**/*', ['pug', 'sass']);
+gulp.task('default', ['pug', 'sass', 'copy'], () => {
+  gulp.watch('./src/**/*', ['pug', 'sass', 'copy']);
 });

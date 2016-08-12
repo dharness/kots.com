@@ -1,0 +1,46 @@
+.ks-hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.ks-hero * {
+  margin: auto;
+}
+
+.ks-hero {
+  h2 {
+    color: #57D7DD;
+    margin-bottom: 30px;
+  }
+  img { margin-bottom: 30px; }
+}
+
+
+.free-quote-button {
+  border-radius: 20px;
+  padding: 20px;
+  background: red;
+}
+
+$ubtn-use-compass: false;
+$ubtn-bgcolor: blue;
+
+.poop-3d {
+  position: relative;
+  border-radius: 20px;
+  top: 0;
+  box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%), 0 8px 3px rgba(0, 0, 0, .2);
+
+  &:hover, &:focus {
+    box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%), 0 8px 3px rgba(0, 0, 0, .2);
+  }
+
+  &:active,
+  &.active,
+  &.is-active {
+    top: 5px;
+    transition-property: all;
+    transition-duration: .15s;
+    box-shadow: 0 2px 0 darken($ubtn-bgcolor, 20%), 0 3px 3px rgba(0, 0, 0, .2);
+  }
+}
