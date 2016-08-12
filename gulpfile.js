@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
 var OUT_DIR = './build';
 
 gulp.task('copy', () => {
@@ -17,6 +18,7 @@ gulp.task('pug', () => {
 gulp.task('sass', function () {
   return gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest(OUT_DIR));
 });
 

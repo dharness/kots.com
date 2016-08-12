@@ -15,24 +15,34 @@
   img { margin-bottom: 30px; }
 }
 
+$ubtn-bgcolor: #FF7275;
 
 .free-quote-button {
   border-radius: 20px;
   padding: 20px;
-  background: red;
+  background: $ubtn-bgcolor;
+  user-select: none;
+  font-family: 'Concert One', cursive;
+  font-size: 26px;
+  color: white;
+}
+
+.free-quote-button:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 $ubtn-use-compass: false;
-$ubtn-bgcolor: blue;
 
 .poop-3d {
   position: relative;
   border-radius: 20px;
   top: 0;
-  box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%), 0 8px 3px rgba(0, 0, 0, .2);
+  box-shadow: 0 7px 0 darken($ubtn-bgcolor, 10%), 0 8px 3px rgba(0, 0, 0, .2);
 
   &:hover, &:focus {
-    box-shadow: 0 7px 0 darken($ubtn-bgcolor, 20%), 0 8px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 7px 0 darken($ubtn-bgcolor, 10%), 0 8px 3px rgba(0, 0, 0, .2);
   }
 
   &:active,
@@ -41,6 +51,6 @@ $ubtn-bgcolor: blue;
     top: 5px;
     transition-property: all;
     transition-duration: .15s;
-    box-shadow: 0 2px 0 darken($ubtn-bgcolor, 20%), 0 3px 3px rgba(0, 0, 0, .2);
+    box-shadow: 0 2px 0 darken($ubtn-bgcolor, 10%), 0 3px 3px rgba(0, 0, 0, .2);
   }
 }
