@@ -1,0 +1,20 @@
+{
+  "name": "kots.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp &",
+    "predev": "npm run build",
+    "dev": "lite-server -c bs-config.json"
+  },
+  "author": "Dylan Harness <dharness.student@gmail.com> (dharness.github.io)",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "3.9.1",
+    "gulp-pug": "3.0.4",
+    "gulp-sass": "2.3.2",
+    "lite-server": "2.2.2"
+  }
+}
