@@ -16,7 +16,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('sass', function () {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src('./src/styles/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(OUT_DIR));

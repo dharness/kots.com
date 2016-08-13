@@ -1,22 +1,34 @@
 .ks-nav {
-  background: none;
-  border: none;
   font-family: 'Concert One', cursive;
-}
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-.navbar-default .navbar-nav > ul {
-  padding-right: 20px;
-  padding-top: 20px;
-}
+  .badge-img {
+    width: 200px;
+    height: 58.5px;
+    @include respond-to(xs, sm) {
+      display: block;
+      margin: 20px auto 20px auto;
+    }
+  }
 
-.navbar-default .navbar-nav > li > a {
-  font-size: 18px;
-}
+  ul {
+    list-style-type: none;
+    overflow: hidden;
 
-.navbar-brand {
-  padding-top: 10px;
-}
-
-.navbar-brand > img {
-  width: 200px;
+    li {
+      display: inline;
+      float: right;
+      padding: 20px;
+      a {
+        font-size: 20px;
+        color: #384856;
+        text-decoration: none;
+      }
+    }
+    @include respond-to(xs, sm) {
+      display: none;
+    }
+  }
 }

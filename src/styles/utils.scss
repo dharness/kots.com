@@ -1,0 +1,28 @@
+$break-xs: 480px;
+$break-sm: 767px;
+$break-md: 991px;
+$break-lg: 1199px;
+
+/**
+ * Used to simplify media queries to align with bootstrap breakpoints
+ * @param  {word} $medias... A list of media types - xs, sm, md, lg, xl
+ */
+@mixin respond-to($medias...) {
+  @each $media in $medias {
+    @if $media == xs {
+      @media only screen and (max-width: $break-xs) { @content; }
+    }
+    @else if $media == sm {
+      @media only screen and (min-width: $break-xs + 1) and (max-width: $break-sm) { @content; }
+    }
+    @else if $media == md {
+      @media only screen and (min-width: $break-sm + 1) and (max-width: $break-md) { @content; }
+    }
+    @else if $media == lg {
+      @media only screen and (min-width: $break-md + 1) and (max-width: $break-lg) { @content; }
+    }
+    @else if $media == xl {
+      @media only screen and (min-width: $break-lg + 1) { @content; }
+    }
+  }
+}

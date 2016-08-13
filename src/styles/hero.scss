@@ -1,6 +1,60 @@
+@keyframes float {
+  0% { left: -10%; }
+  25% { left: 10%; }
+  50% { left: -10%; }
+  75% { left: 10%; }
+  100% { left: -10%; }
+}
+
 .ks-hero {
-  display: flex;
-  flex-direction: column;
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cloud-bg {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+
+    .cloud-rows {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      .cloud-row {
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        z-index: 1;
+        width: 100%;
+        height: 50%;
+        img {
+          padding: 0 100px 0 100px;
+          position: relative;
+          animation: float 25s;
+          animation-timing-function: linear;
+          animation-iteration-count:infinite;
+          height: 100px
+        }
+        .c-1 {
+          animation-delay: -.5s;
+          padding-right: 700px!important;
+        }
+        .c-2 {
+          padding-left: 100px;
+          animation-delay: -5.5s;
+        }
+        .c-3 {
+          animation-delay: -5s;
+          padding-right: 100px;
+        }
+      }
+    }
+  }
 }
 
 .ks-hero * {
@@ -11,46 +65,34 @@
   h2 {
     color: #57D7DD;
     margin-bottom: 30px;
+    text-align: center;
   }
-  img { margin-bottom: 30px; }
+  img {
+    margin: auto;
+    margin-bottom: 30px;
+    max-width: 600px;
+    min-width: 380px;
+    width: 90%;
+    overflow: hidden;
+  }
 }
-
-$ubtn-bgcolor: #FF7275;
 
 .free-quote-button {
   border-radius: 20px;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   background: $ubtn-bgcolor;
   user-select: none;
   font-family: 'Concert One', cursive;
   font-size: 26px;
   color: white;
+  letter-spacing: 1px;
+  font-weight: thin;
+  text-align: center;
+  width: 250px;
 }
 
 .free-quote-button:hover {
   cursor: pointer;
   text-decoration: none;
   color: white;
-}
-
-$ubtn-use-compass: false;
-
-.poop-3d {
-  position: relative;
-  border-radius: 20px;
-  top: 0;
-  box-shadow: 0 7px 0 darken($ubtn-bgcolor, 10%), 0 8px 3px rgba(0, 0, 0, .2);
-
-  &:hover, &:focus {
-    box-shadow: 0 7px 0 darken($ubtn-bgcolor, 10%), 0 8px 3px rgba(0, 0, 0, .2);
-  }
-
-  &:active,
-  &.active,
-  &.is-active {
-    top: 5px;
-    transition-property: all;
-    transition-duration: .15s;
-    box-shadow: 0 2px 0 darken($ubtn-bgcolor, 10%), 0 3px 3px rgba(0, 0, 0, .2);
-  }
 }
