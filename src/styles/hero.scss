@@ -81,7 +81,6 @@
 .free-quote-button {
   border-radius: 20px;
   padding: 15px 20px 15px 20px;
-  background: $ubtn-bgcolor;
   user-select: none;
   font-family: 'Concert One', cursive;
   font-size: 26px;
@@ -92,6 +91,8 @@
   width: 250px;
   display: block;
   margin: auto;
+  background: $salmon;
+  @include btn-3d($salmon);
 }
 
 .free-quote-button:hover {

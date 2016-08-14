@@ -1,0 +1,30 @@
+.ks-mission {
+  margin-bottom: 250px;
+  .mission-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+    .mission-statement {
+      width: 500px;
+      margin: auto;
+      h2 { text-align: center; }
+      .tiny-accents {
+        display: block;
+        margin: auto;
+      }
+    }
+    .mission-img {
+      margin: auto;
+      width: 200px;
+      height: 400px;
+    }
+    @include respond-to(xs, sm) {
+      flex-direction: column;
+      .mission-statement {
+        width: 300px;
+      }
+    }
+  }
+}

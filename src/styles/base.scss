@@ -1,9 +1,40 @@
+$blue-dark: #384856;
+$blue-green: #9FF1F4;
+$blue-green-light: #DDFEFD;
+$salmon: #FF7275;
+$crummy-yellow: #F6E265;
+
 body {margin: 0px;}
+* { user-select: none; }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Concert One', cursive;
+  color: $blue-dark;
 }
 
-$blue-dark: #384856;
-$blue-green: #9FF1F4;
-$ubtn-bgcolor: #FF7275;
+p {
+  font-family: FaktSoftPro;
+  font-size: 20px;
+  color: $blue-dark;
+  letter-spacing: 0.69px;
+  line-height: 30px;
+}
+
+a { color: $blue-dark; }
+
+@font-face {
+    font-family: "FaktSoftPro";
+    src: url("https://marvelapp.com/static/assets/webfonts/fakt-soft/FaktSoftPro-Normal.woff") format('woff');
+}
+
+@font-face {
+    font-family: "FaktSoftPro";
+    src: url("https://marvelapp.com/static/assets/webfonts/fakt-soft/FaktSoftPro-Blond.woff") format('woff');
+    font-weight: thin;
+}
+
+@font-face {
+    font-family: "FaktSoftPro";
+    src: url("https://marvelapp.com/static/assets/webfonts/fakt-soft/FaktSoftPro-Medium.woff") format('woff');
+    font-weight: bold;
+}
