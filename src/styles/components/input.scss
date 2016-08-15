@@ -1,0 +1,11 @@
+.ks-input {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  color: $blue-dark;
+  &::placeholder {
+    font-family: 'FaktSoftPro';
+    color: #ACBECE;
+    letter-spacing: 0.56px;
+  }
+}

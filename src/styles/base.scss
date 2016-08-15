@@ -1,8 +1,10 @@
 $blue-dark: #384856;
+$blue-dark-light: #3A4157;
 $blue-green: #9FF1F4;
 $blue-green-light: #DDFEFD;
 $salmon: #FF7275;
 $crummy-yellow: #F6E265;
+$blue-grey: #8492A6;
 
 body {margin: 0px;}
 * { user-select: none; }
@@ -30,7 +32,7 @@ a { color: $blue-dark; }
 @font-face {
     font-family: "FaktSoftPro";
     src: url("https://marvelapp.com/static/assets/webfonts/fakt-soft/FaktSoftPro-Blond.woff") format('woff');
-    font-weight: thin;
+    font-weight: light;
 }
 
 @font-face {

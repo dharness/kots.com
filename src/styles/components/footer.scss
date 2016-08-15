@@ -1,0 +1,38 @@
+.ks-footer {
+  background: $blue-dark-light;
+  padding: 40px;
+  .section-title {
+    font-family: 'Concert One';
+    color: white;
+    font-size: 40px;
+    letter-spacing: 1.35px;
+    margin-bottom: 40px;
+  }
+  p {
+    font-family: 'FaktSoftPro';
+    color: white;
+    width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .free-quote-button { margin-bottom: 40px; }
+  .closing-title {
+    text-align: center;
+    color: white;
+  }
+  .mail-logo {
+    display: block;
+    margin: auto;
+  }
+  .email-input {
+    @extend .ks-input;
+    width: 250px;
+    border: none;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  @include respond-to(xs, sm) {
+    p { width: 100%; }
+  }
+}

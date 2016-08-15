@@ -1,0 +1,40 @@
+.ks-learning {
+  $container-width: 800px;
+  margin-bottom: 100px;
+  h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  p {
+    width: $container-width;
+    margin: auto;
+    color: $blue-grey;
+    margin-bottom: 40px;
+  }
+  .input-sections {
+    display: flex;
+    flex-direction: column;
+    width: $container-width;
+    margin: auto;
+    .email-input {
+      margin-bottom: 20px;
+      input {
+        @extend .ks-input;
+        width: 300px;
+        border: solid 1px #979797;
+        font-size: 18px;
+      }
+    }
+    .message-input {
+      @extend .ks-input;
+      border: solid 1px #979797;
+      width: 600px;
+      resize: none;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+  }
+  .free-quote-button {
+    width: 200px;
+  }
+}

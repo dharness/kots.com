@@ -1,0 +1,37 @@
+.ks-portfolio {
+  h1 {
+    text-align: center;
+  }
+  .image-slider {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 40px;
+    .images {
+      width: 850px;
+      overflow: hidden;
+      white-space: nowrap;
+      .slider-img {
+        display: inline-block;
+        transition: transform .5s;
+      }
+    }
+  }
+}
+
+.slider-arrow {
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  img {
+    $diameter: 32px;
+    width: $diameter;
+    border-radius: $diameter/2;
+    background: white;
+    &:hover {
+      cursor: pointer;
+      box-shadow: -3px 1px 5px 0px rgba(219,219,219,0.50);
+      transform: scale(1.1);
+    }
+  }
+}

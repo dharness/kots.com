@@ -1,0 +1,35 @@
+.ks-methods {
+  margin-bottom: 40px;
+  .section-title { margin-bottom: 70px; }
+  .methods-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    justify-content: center;
+    margin: auto;
+    .recipe-method {
+      width: 350px;
+      .method-title {
+        font-size: 30px;
+        letter-spacing: 0.93px;
+        text-align: center;
+      }
+      p {
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin: auto;
+        max-width: 350px;
+      }
+    }
+    @include respond-to(xs, sm) {
+      flex-direction: column;
+      .recipe-method {
+        margin: auto;
+      }
+    }
+  }
+}
