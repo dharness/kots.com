@@ -4,7 +4,7 @@ html
     meta(http-equiv="content-type", content="text/html; charset=UTF-8")
     meta(name="description", content="")
     meta(name="keywords", content="")
-    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
     link(href='https://fonts.googleapis.com/css?family=Concert+One', rel='stylesheet')
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css')
     link(rel="stylesheet", href="main.css", type="text/css")
@@ -13,16 +13,17 @@ html
     .ks-portfolio
       h1 Our Portfolio
       .image-slider
-        .slider-arrow(onclick="slideImage('previous')")
+        .slider-arrow(id="slider-left")
           img(src="assets/images/arrow-left.svg")
-        .images
+        .images(id="test")
           img.slider-img(src="assets/images/portfolio/bablot-compressor.png")
           img.slider-img(src="assets/images/portfolio/beamer-compressor.png")
           img.slider-img(src="assets/images/portfolio/botany-compressor.png")
-        .slider-arrow(onclick="slideImage('next')")
+        .slider-arrow(id="slider-right")
           img(src="assets/images/arrow-right.svg")
     include ./components/footer
-    script(  src='https://code.jquery.com/jquery-3.1.0.slim.min.js',   integrity='sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=',   crossorigin='anonymous')
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
     script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js')
+    script(type='text/javascript', src='https://cdn.rawgit.com/hammerjs/hammer.js/master/hammer.min.js')
     script(src="js/scroll.js")
     script(src="js/slider.js")
