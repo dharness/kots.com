@@ -12,10 +12,18 @@
       max-width: 850px;
       overflow: hidden;
       white-space: nowrap;
-      .slider-img {
-        display: inline-block;
-        transition: transform .5s;
-        @include respond-to(xs, sm) {
+      .item {
+        .slider-img {
+          user-select: none;
+          display: inline-block;
+          transition: transform .5s;
+          @include respond-to(xs, sm) {
+            width: 100%;
+          }
+        }
+        p {
+          word-wrap: break-all;
+          white-space: normal;
           width: 100%;
         }
       }
@@ -37,7 +45,8 @@
   justify-content: center;
   margin: auto;
   @include respond-to(xs, sm) {
-    display: none;
+    display: none!important;
+    background: red;
   }
   img {
     $diameter: 32px;
