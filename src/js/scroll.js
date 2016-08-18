@@ -8,7 +8,3 @@ window.onscroll = function (e) {
     nav.classList.remove("scroll-view");
   }
 }
-
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});

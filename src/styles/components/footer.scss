@@ -1,5 +1,5 @@
 .ks-footer {
-  padding: 40px;
+  padding: 40px 15px 10px 15px;
   background: url('assets/images/pattern-darkblue.svg'), $blue-dark-light;
   .section-title {
     font-family: 'Concert One';
@@ -42,6 +42,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin-bottom: 200px;
     .info {
       display: inline-block;
       p {
@@ -103,5 +104,26 @@
   @include respond-to(xs, sm) {
     p { width: 100%; }
     background: $blue-dark-light;
+  }
+}
+
+.fine-print {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  p {
+    font-family: Nunito-Light;
+    font-size: 16px;
+    letter-spacing: 0.49px;
+    margin: 0;
+    font-weight: 100;
+  }
+  .right {
+    display: flex;
+    flex-direction: row;
+    .copyright {
+      padding: 10px;
+      color: white;
+    }
   }
 }
