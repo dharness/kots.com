@@ -9,12 +9,13 @@ html
     link(rel="stylesheet", href="main.css", type="text/css")
     title King of the Stack
   body
-    include ./components/nav
-    include ./components/hero
-    include ./components/about
-    include ./components/mission
-    include ./components/portfolioPrompt
-    include ./components/methods
-    include ./components/footer
+    .overflowWrap
+      include ./components/nav
+      include ./components/hero
+      include ./components/about
+      include ./components/mission
+      include ./components/portfolioPrompt
+      include ./components/methods
+      include ./components/footer
   script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
   script(src="main.min.js")

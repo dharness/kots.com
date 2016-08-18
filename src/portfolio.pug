@@ -9,32 +9,33 @@ html
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css')
     link(rel="stylesheet", href="main.css", type="text/css")
   body
-    include ./components/nav
-    .ks-portfolio
-      h1 Our Portfolio
-      .image-slider
-        .slider-arrow(id="slider-left")
-          img(src="assets/images/arrow-left.svg")
-        .images(id="test")
-          .item
-            img.slider-img(src="assets/images/portfolio/bablot-compressor.png")
-          .item
-            img.slider-img(src="assets/images/portfolio/beamer-compressor.png")
-          .item
-            img.slider-img(src="assets/images/portfolio/botany-compressor.png")
-        .slider-arrow(id="slider-right")
-          img(src="assets/images/arrow-right.svg")
-      .blurbs
-        .blurb.show(id="blurb-0")
-          h2 Bablot
-          p Bablot is a communications tool for Property Rental managers. It uses Facebook messenger to automate responses, and turn after hour visitors into valuable leads. After designing the web portal, we implemented the app in Angular 2 and Node, then finally deployed with Docker. Once the product was ready we moved to branding, logo design, proposal writing, marketing, and sales.
-          p To top it all off we crafted <i>7 custom AI chat bots</i> from the ground up for a variety of property rental managers.
-        .blurb(id="blurb-1")
-          h2 Lemmons
-          p At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        .blurb(id="blurb-2")
-          h2 Botany
-          p Botany is changing the way people make chat bots. We designed custom software to let people create custom chatbots with no code! For developers, we built an open API to give anyone the power to develop chat bots.
-    include ./components/footer
-    script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
-    script(src="main.min.js")
+    .overflowWrap
+      include ./components/nav
+      .ks-portfolio
+        h1 Our Portfolio
+        .image-slider
+          .slider-arrow(id="slider-left")
+            img(src="assets/images/arrow-left.svg")
+          .images(id="test")
+            .item
+              img.slider-img(src="assets/images/portfolio/bablot-compressor.png")
+            .item
+              img.slider-img(src="assets/images/portfolio/beamer-compressor.png")
+            .item
+              img.slider-img(src="assets/images/portfolio/botany-compressor.png")
+          .slider-arrow(id="slider-right")
+            img(src="assets/images/arrow-right.svg")
+        .blurbs
+          .blurb.show(id="blurb-0")
+            h2 Bablot
+            p Bablot is a communications tool for Property Rental managers. It uses Facebook messenger to automate responses, and turn after hour visitors into valuable leads. After designing the web portal, we implemented the app in Angular 2 and Node, then finally deployed with Docker. Once the product was ready we moved to branding, logo design, proposal writing, marketing, and sales.
+            p To top it all off we crafted <i>7 custom AI chat bots</i> from the ground up for a variety of property rental managers.
+          .blurb(id="blurb-1")
+            h2 Lemmons
+            p At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          .blurb(id="blurb-2")
+            h2 Botany
+            p Botany is changing the way people make chat bots. We designed custom software to let people create custom chatbots with no code! For developers, we built an open API to give anyone the power to develop chat bots.
+      include ./components/footer
+      script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+      script(src="main.min.js")

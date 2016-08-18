@@ -8,17 +8,18 @@ html
     link(href='https://fonts.googleapis.com/css?family=Concert+One', rel='stylesheet')
     link(rel="stylesheet", href="main.css", type="text/css")
   body
-    include ./components/nav
-    .ks-learning
-      h1 Free Programming Mentorship!
-      p We are offering free mentorship for those who want to learn about the latest in web tech. We cater the lessons specifically to your needs, whether you’re a beginner, or just want to brush up on some skills.
-      br
-      p This course is all about what you want it to be. The offer goes out to the first 15 people who sign up each month! But don’t worry, there are sticker packs and discount codes for everyone who applies.
-      .input-sections
-        .email-input
-          input(type="email", placeholder="email")
-        textarea.message-input(rows="5", placeholder="What do you want to learn?")
-      .free-quote-button Yes, I like pie
-    include ./components/footer
-    script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
-    script(src="main.min.js")
+    .overflowWrap
+      include ./components/nav
+      .ks-learning
+        h1 Free Programming Mentorship!
+        p We are offering free mentorship for those who want to learn about the latest in web tech. We cater the lessons specifically to your needs, whether you’re a beginner, or just want to brush up on some skills.
+        br
+        p This course is all about what you want it to be. The offer goes out to the first 15 people who sign up each month! But don’t worry, there are sticker packs and discount codes for everyone who applies.
+        .input-sections
+          .email-input
+            input(type="email", placeholder="email")
+          textarea.message-input(rows="5", placeholder="What do you want to learn?")
+        .free-quote-button Yes, I like pie
+      include ./components/footer
+      script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+      script(src="main.min.js")
