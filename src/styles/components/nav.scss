@@ -1,6 +1,7 @@
 $nav-height: 70px;
 
-html.no-scroll, body.no-scroll {
+html, body {
+  background: red;
   overflow: hidden;
 }
 
