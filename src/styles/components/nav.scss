@@ -1,5 +1,9 @@
 $nav-height: 70px;
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .ks-nav {
   position: fixed;
   top: 0px;
