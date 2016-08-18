@@ -18,22 +18,23 @@ html
         .images(id="test")
           .item
             img.slider-img(src="assets/images/portfolio/bablot-compressor.png")
-            h2 Bablot
-            p Bablot is a communications tool for Property Rental managers. It uses Facebook messenger to automate responses, and turn after hour visitors into valuable leads. We completed web design and mock up for mutliple versions of the site, as well as branding, logo design, poster design, proposal writing, marketing, and sales.
-            p To top it all off we crafted <i>7 custom chat bots</i> with from the ground up complete with Artificial Intelligence that handle a wealth of situations.
           .item
             img.slider-img(src="assets/images/portfolio/beamer-compressor.png")
-            h2 Lemmons
-            p At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           .item
             img.slider-img(src="assets/images/portfolio/botany-compressor.png")
-            h2 Botany
-            p Botany is changing the way people make chat bots. We designed custom software to let people create custom chatbots with no code! For developers, we built an open API to give anyone the power to develop chat bots.
         .slider-arrow(id="slider-right")
           img(src="assets/images/arrow-right.svg")
+      .blurbs
+        .blurb.show(id="blurb-0")
+          h2 Bablot
+          p Bablot is a communications tool for Property Rental managers. It uses Facebook messenger to automate responses, and turn after hour visitors into valuable leads. After designing the web portal, we implemented the app in Angular 2 and Node, then finally deployed with Docker. Once the product was ready we moved to branding, logo design, proposal writing, marketing, and sales.
+          p To top it all off we crafted <i>7 custom AI chat bots</i> from the ground up for a variety of property rental managers.
+        .blurb(id="blurb-1")
+          h2 Lemmons
+          p At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod At lemmons we make all kinds of Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        .blurb(id="blurb-2")
+          h2 Botany
+          p Botany is changing the way people make chat bots. We designed custom software to let people create custom chatbots with no code! For developers, we built an open API to give anyone the power to develop chat bots.
     include ./components/footer
     script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
-    script(type='text/javascript', src='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js')
-    script(type='text/javascript', src='https://cdn.rawgit.com/hammerjs/hammer.js/master/hammer.min.js')
-    script(src="js/scroll.js")
-    script(src="js/slider.js")
+    script(src="main.min.js")

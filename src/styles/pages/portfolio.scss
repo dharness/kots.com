@@ -2,15 +2,40 @@
   h1 {
     text-align: center;
   }
+  .blurbs {
+    max-width: 850px;
+    margin: auto;
+    height: 400px;
+    .blurb {
+      transition: opacity 0.2s;
+      overflow: hidden;
+      opacity: 0;
+      height: 0px;
+      h2 {
+        text-align: center;
+        letter-spacing: 0.9px;
+      }
+      p { text-align: justify; }
+      &.show {
+        opacity: 1!important;
+        height: 100%!important;
+        @include respond-to(xs, sm) {
+          padding: 20px;
+        }
+      }
+    }
+    @include respond-to(xs, sm) {
+      height: 600px;
+    }
+  }
   .image-slider {
     display: flex;
     flex-direction: row;
     margin: auto;
     width: 1200px;
-    margin-bottom: 40px;
     .images {
       max-width: 850px;
-      overflow: hidden;
+      overflow: hidden!important;
       white-space: nowrap;
       .item {
         .slider-img {

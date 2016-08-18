@@ -27,6 +27,12 @@ $break-lg: 1199px;
   }
 }
 
+.no-mobile {
+  @include respond-to(xs, sm) {
+    display: none!important;
+  }
+}
+
 .screen-container {
   width: 1400px;
   margin: auto;

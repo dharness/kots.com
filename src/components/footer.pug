@@ -1,7 +1,11 @@
 .ks-footer
   .section-title Let's make it happen
   p We’ll look over your project and give you a free quote. We’ll also throw in a preliminary free design or code review. Once we get in touch, we’ll learn about your needs and get to work making something wonderful together.
-  input.email-input(type="email", placeholder="email or phone number")
-  a.free-quote-button get FREE quote
-  img.mail-logo(src="assets/images/mail.svg")
-  h1.closing-title King of the Stack
+  form.input-form(id="message-form")
+    input.email-input(type='text', name='name', placeholder="email or phone number")
+    input.email-input(type='email', name='_replyto')
+    a.free-quote-button(onclick="signupMail()") Get Stacked
+  .logo-wrapper
+    .mail-logo
+      img(src="assets/images/mail.svg")
+  h1.closing-title(style="display: none") King of the Stack?

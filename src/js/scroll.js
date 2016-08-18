@@ -1,4 +1,3 @@
-
 window.onscroll = function (e) {
   var scrollPos = document.body.scrollTop;
   var nav = document.querySelector('#main-nav');

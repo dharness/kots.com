@@ -1,5 +1,6 @@
 .ks-mission {
   margin-bottom: 250px;
+  background: url('assets/images/patter-lightblue.svg');
   .mission-wrapper {
     display: flex;
     flex-direction: row;
@@ -7,18 +8,33 @@
     max-width: 1200px;
     margin: auto;
     .mission-statement {
-      width: 500px;
+      width: 400px;
       margin: auto;
-      h2 { text-align: center; }
+      .section-title {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
       .tiny-accents {
         display: block;
         margin: auto;
       }
+      p {
+        color: $md-grey;
+        margin: auto;
+        text-align: justify;
+        padding-top: 20px;
+      }
     }
     .mission-img {
       margin: auto;
+      margin-left: 0px;
       width: 200px;
       height: 400px;
+      @include respond-to(xs, sm) {
+        margin: auto;
+        margin-top: 20px;
+      }
     }
     @include respond-to(xs, sm) {
       flex-direction: column;
@@ -26,5 +42,18 @@
         width: 300px;
       }
     }
+  }
+  @include respond-to(xs, sm) {
+    background: white;
+  }
+}
+
+.noodles-cloud {
+  display: inline-block;
+  margin: auto; 
+  margin-top: 70px; 
+  width: 100px;
+  @include respond-to(md, lg, xl) {
+    display: none;
   }
 }

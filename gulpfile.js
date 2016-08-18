@@ -1,6 +1,9 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var pump = require('pump');
 var autoprefixer = require('gulp-autoprefixer');
 var OUT_DIR = './build';
 
@@ -9,12 +12,19 @@ gulp.task('assets', () => {
     .pipe(gulp.dest(`${OUT_DIR}/assets`));
 });
 
-gulp.task('js', () => {
-  return gulp.src('./src/js/**/*')
-    .pipe(gulp.dest(`${OUT_DIR}/js`));
+gulp.task('js', function (cb) {
+  pump([
+      gulp.src(['./lib/**/*.js', './src/js/**/*.js']),
+      concat('main.min.js'),
+      uglify(),
+      gulp.dest(`${OUT_DIR}`)
+    ],
+    cb
+  );
 });
 
 gulp.task('pug', () => {
+  console.log('puggggg');
   return gulp.src('./src/{index,learn,portfolio}.pug')
     .pipe(pug({}))
     .pipe(gulp.dest(OUT_DIR));
@@ -22,11 +32,11 @@ gulp.task('pug', () => {
 
 gulp.task('sass', function () {
   return gulp.src('./src/styles/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(OUT_DIR));
 });
 
-gulp.task('default', ['pug', 'sass', 'assets', 'js'], () => {
-  gulp.watch('./src/**/*', ['pug', 'sass', 'assets', 'js']);
+gulp.task('default', ['pug', 'sass', 'js', 'assets'], () => {
+  gulp.watch('./src/**/*', ['pug', 'sass', 'js', 'assets']);
 });

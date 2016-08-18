@@ -1,12 +1,15 @@
 .ks-footer {
-  background: $blue-dark-light;
   padding: 40px;
+  background: url('assets/images/pattern-darkblue.svg'), $blue-dark-light;
   .section-title {
     font-family: 'Concert One';
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: 1.35px;
     margin-bottom: 40px;
+    @include respond-to(xs, sm) {
+      font-size: 25px;
+    }
   }
   p {
     font-family: 'FaktSoftPro';
@@ -14,25 +17,81 @@
     width: 600px;
     margin: auto;
     margin-bottom: 40px;
+    text-align: justify;
+    @include respond-to(xs, sm) {
+      font-size: 16px;
+      letter-spacing: 0.49px;
+      line-height: 28px;
+    }
   }
-  .free-quote-button { margin-bottom: 40px; }
+  .free-quote-button {
+    margin-bottom: 40px;
+    width: 100%;
+    border: none;
+  }
   .closing-title {
     text-align: center;
     color: white;
   }
-  .mail-logo {
-    display: block;
+  .input-form {
+    width: 250px;
     margin: auto;
+  }
+   .logo-wrapper {
+    display: flex;
+    width: 100%;
+    .mail-logo {
+      display: inline-block;
+      margin: auto;
+      img {
+        transition: transform 0.1s ease;
+        display: block;
+        margin: auto;
+        &:hover, &:active {
+          transform: scale(1.5, 1.5);
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        &:after {
+          display: block;
+        }
+      }
+      &:after {
+        content: "copy!";
+        position: relative;
+        top: -25px;
+        left: 70px;
+        color: white;
+        font-family: FaktSoftPro;
+        font-size: 20px;
+        display: none;
+      }
+    }
   }
   .email-input {
     @extend .ks-input;
-    width: 250px;
+    width: 100%;
+    box-sizing: border-box;
     border: none;
     display: block;
     margin: auto;
     margin-bottom: 40px;
+    font-size: 16px;
+    user-select: auto!important;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+  .head-logo {
+    width: 142px;
+    display: block;
+    margin: auto;
+    margin-top: 100px;
+    @include respond-to(xs, sm) {}
   }
   @include respond-to(xs, sm) {
     p { width: 100%; }
+    background: $blue-dark-light;
   }
 }
