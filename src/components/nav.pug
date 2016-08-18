@@ -21,13 +21,16 @@ nav.ks-nav-strut
 .nav-wrapper
   nav.ks-nav-mobile(id="main-nav")
     ul.nav-list-items
-      li(onclick="toggleNav()")
-        a(href='#') process
-      li(onclick="toggleNav()")
-        a(href='learn.html') learndd
+      .close-btn-wrapper
+        .close-btn(onclick="toggleNav()")
+      li.top(onclick="toggleNav()")
+        a(href='/#about') about
       li(onclick="toggleNav()")
         a(href='portfolio.html') portfolio
       li(onclick="toggleNav()")
-        a(href='/#about') about
+        a(href='learn.html') learn
+      li(onclick="toggleNav()")
+        a(href='#') process
+      a.free-quote-button Free Quote
   nav.ks-nav-strut.mobile
   .screen(onclick="toggleNav()")
