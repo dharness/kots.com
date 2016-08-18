@@ -1,6 +1,7 @@
 nav.ks-nav(id="main-nav")
   .screen-container
-    img.badge-img(src='assets/images/badge.svg', onclick="window.location.href = '/'")
+    .badge-img
+      img(src='assets/images/logo.png', onclick="window.location.href = '/'")
     ul.nav-list-items
       li.no-mobile
         a.free-quote-button Free Quote
@@ -15,7 +16,7 @@ nav.ks-nav(id="main-nav")
       .hamburger(onclick="toggleNav()")
         img(src="assets/images/hamburger-menu.svg")
       .mobile-button
-        a.free-quote-button Free Quote
+        a.free-quote-button(href="/#footer") Free Quote
 nav.ks-nav-strut
 
 .nav-wrapper.closed
@@ -31,7 +32,7 @@ nav.ks-nav-strut
         a(href='learn.html') learn
       li(onclick="toggleNav(); window.location.href = '/#process';")
         a(href='/#process') process
-      a.free-quote-button Free Quote
+      a.free-quote-button(href="/#footer", onclick="toggleNav()") Free Quote
       .pencil-accent
   nav.ks-nav-strut.mobile
   .screen(onclick="toggleNav()")
