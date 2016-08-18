@@ -10,6 +10,9 @@
     margin: auto;
     color: $blue-grey;
     margin-bottom: 40px;
+    @include respond-to(xs, sm) {
+      width: 90%;
+    }
   }
   .input-sections {
     display: flex;
@@ -23,6 +26,10 @@
         width: 300px;
         border: solid 1px #979797;
         font-size: 18px;
+        margin-left: 10px;
+      }
+      @include respond-to(xs, sm) {
+        width: 90%!important;
       }
     }
     .message-input {
@@ -32,6 +39,13 @@
       resize: none;
       margin-bottom: 40px;
       font-size: 18px;
+      @include respond-to(xs, sm) {
+        width: 80%!important;
+        margin-left: 10px;
+      }
+    }
+    @include respond-to(xs, sm) {
+      width: 100%;
     }
   }
   .free-quote-button {
