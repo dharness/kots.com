@@ -27,6 +27,7 @@
         border: solid 1px #979797;
         font-size: 18px;
         margin-left: 10px;
+        user-select: auto;
       }
       @include respond-to(xs, sm) {
         width: 90%!important;
@@ -39,6 +40,7 @@
       resize: none;
       margin-bottom: 40px;
       font-size: 18px;
+      user-select: auto;
       @include respond-to(xs, sm) {
         width: 80%!important;
         margin-left: 10px;

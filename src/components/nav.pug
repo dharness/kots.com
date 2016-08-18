@@ -23,13 +23,13 @@ nav.ks-nav-strut
     ul.nav-list-items
       .close-btn-wrapper
         .close-btn(onclick="toggleNav()")
-      li.top(onclick="toggleNav()")
+      li.top(onclick="toggleNav(); window.location.href = '/#about';")
         a(href='/#about') about
-      li(onclick="toggleNav()")
+      li(onclick="toggleNav(); window.location.href = 'portfolio.html';")
         a(href='portfolio.html') portfolio
-      li(onclick="toggleNav()")
+      li(onclick="toggleNav(); window.location.href = 'learn.html';")
         a(href='learn.html') learn
-      li(onclick="toggleNav()")
+      li(onclick="toggleNav(); window.location.href = '/#process';")
         a(href='/#process') process
       a.free-quote-button Free Quote
       .pencil-accent
