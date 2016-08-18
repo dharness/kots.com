@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var pump = require('pump');
 var autoprefixer = require('gulp-autoprefixer');
-var OUT_DIR = './build';
+var OUT_DIR = './docs';
 
 gulp.task('assets', () => {
   return gulp.src('./src/assets/**/*')
