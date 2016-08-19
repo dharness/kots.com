@@ -19,16 +19,21 @@
     flex-direction: column;
     width: $container-width;
     margin: auto;
-    .email-input {
-      margin-bottom: 20px;
-      input {
-        @extend .ks-input;
-        width: 300px;
-        border: solid 1px #979797;
-        font-size: 18px;
-        margin-left: 10px;
-        user-select: auto;
+    &.erorr {
+      .email-input {
+        &:invalid {
+          border: solid 1px $salmon;
+        }
       }
+    }
+    .email-input {
+      @extend .ks-input;
+      margin-bottom: 20px;
+      width: 300px;
+      border: solid 1px #979797;
+      font-size: 18px;
+      user-select: auto;
+      outline: none;
       @include respond-to(xs, sm) {
         width: 90%!important;
       }
@@ -41,6 +46,7 @@
       margin-bottom: 40px;
       font-size: 18px;
       user-select: auto;
+      outline: none;
       @include respond-to(xs, sm) {
         width: 80%!important;
         margin-left: 10px;
