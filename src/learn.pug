@@ -16,8 +16,8 @@ html
         br
         p This course is all about what you want it to be. The offer goes out to the first 15 people who sign up each month! But don’t worry, there are sticker packs and discount codes for everyone who applies.
         form.input-sections(id="learn-form", name="learning-message")
-          input.email-input(type="email", placeholder="email", name='email',required)
-          textarea.message-input(name='message', rows="5", placeholder="What do you want to learn?")
+          input.form-el.email-input(type="email", placeholder="email", name='email',required)
+          textarea.form-el.message-input(name='message', rows="5", placeholder="What do you want to learn?")
         .free-quote-button(onclick="sendMail('#learn-form')") Yes, I like pie
       include ./components/footer
       script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
