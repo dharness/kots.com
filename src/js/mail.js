@@ -1,19 +1,28 @@
-function signupMail() {
-  var formData = $('#message-form').serialize();
-  alert(formData);
-  $.ajax({
-    method: 'POST',
-    url: 'https://formspree.io/dharness.student@gmail.com',
-    data: formData,
-    success: function(data) {
-      $('#message-form').reset();
-    },
-    dataType: 'json',
-    success: function(data) {
-      alert(JSON.stringify(data));
-    },
-    error: function(data) {
-      alert(JSON.stringify(data));
-    }
-  })
+function sendMail(formSelector) {
+  var form = $(formSelector);
+  console.log(form[0].checkValidity());
+  if (form[0].checkValidity()) {
+    var formData = form.serialize();
+    alert(formData);
+    $('.form-el').val('');
+    form.removeClass('erorr');
+  } else {
+    form.addClass('erorr');
+    $('.email-input').focus();
+  }
+  // $.ajax({
+  //   method: 'POST',
+  //   dataType: 'json',
+  //   data: formData,
+  //   url: 'https://formspree.io/dharness.student@gmail.com',
+  //   success: function(data) {
+  //     console.log(data);
+  //   },
+  //   success: function(data) {
+  //     alert(JSON.stringify(data));
+  //   },
+  //   error: function(data) {
+  //     alert(JSON.stringify(data));
+  //   }
+  // });
 }

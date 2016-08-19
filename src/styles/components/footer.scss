@@ -36,6 +36,20 @@
   .input-form {
     width: 400px;
     margin: auto;
+    textarea, input {
+      outline: none;
+      border: solid 3px white;
+      &:focus {
+        border: solid 3px #27B1B6;
+      }
+    }
+    &.erorr {
+      .email-input {
+        &:invalid {
+          border: solid 3px $salmon;
+        }
+      }
+    }
   }
   .info-wrapper {
     display: flex;

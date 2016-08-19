@@ -1,10 +1,10 @@
 .ks-footer(id="footer")
   .section-title Let's make it happen
   p We’ll look over your project and give you a free quote. We’ll also throw in a preliminary free design or code review. Once we get in touch, we’ll learn about your needs and get to work making something wonderful together.
-  form.input-form(id="message-form")
-    input.email-input(type='text', name='name', placeholder="email")
-    textarea.message-input(type='email', placeholder="optional message", rows="3")
-    a.free-quote-button(onclick="signupMail()") Get Stacked
+  form.input-form(id="message-form", name="quote-message")
+    input.form-el.email-input(type='email', name='email', placeholder="email", required)
+    textarea.form-el.message-input(type='email', name='optional_message', placeholder="optional message", rows="3")
+    a.free-quote-button(onclick="sendMail('#message-form')") Get Stacked
   .info-wrapper
     .info
       p <b>Contact us:</b>
