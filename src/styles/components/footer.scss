@@ -26,9 +26,13 @@
     }
   }
   .free-quote-button {
+    margin: auto;
     margin-bottom: 40px;
-    width: 100%;
+    width: 40%;
     border: none;
+    @include respond-to(xs, sm) {
+      width: 100%;
+    }
   }
   .closing-title {
     text-align: center;
