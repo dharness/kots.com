@@ -135,10 +135,12 @@ $nav-height: 70px;
     .nav-list-items {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       height: 100%;
       background: white;
       padding: 0px;
       margin: 0px;
+      overflow-y: scroll;
       .close-btn-wrapper {
         display: flex;
         flex-direction: row;
@@ -156,7 +158,7 @@ $nav-height: 70px;
         }
       }
       li {
-        padding: 30px;
+        padding: 20px;
         width: 60%;
         margin: 0 auto 0 auto;
         list-style: none;
@@ -182,7 +184,6 @@ $nav-height: 70px;
         padding: 10px;
         width: 130px;
         font-size: 20px;
-        margin-bottom: 20px;
       }
       .pencil-accent {
         background: url('assets/images/lil-pencil.svg');

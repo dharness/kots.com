@@ -32,20 +32,34 @@
     display: flex;
     flex-direction: row;
     margin: auto;
-    width: 1200px;
-    .images {
-      max-width: 850px;
+    width: 90%;
+    height: 90%;
+    $total-width: 100%;
+    $total-height: 100%;
+    @include respond-to(xs, sm) {
+      height: 250px;
+    }
+    * {
       overflow: hidden!important;
-      white-space: nowrap;
-      .item {
-        .slider-img {
-          user-select: none;
-          display: inline-block;
-          transition: transform .5s;
-          @include respond-to(xs, sm) {
-            width: 100%;
-          }
-        }
+    }
+    .slick-list.draggable {
+      height: $total-height;
+      width: $total-width;
+    }
+    .images {
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      height: $total-height;
+      width: $total-width;
+      overflow: hidden;
+      .slider-img {
+        user-select: none;
+        display: inline-block;
+        transition: transform .5s;
+        height: $total-height;
+        width: $total-width;
+        @include respond-to(xs, sm) { width: 100%; }
         p {
           word-wrap: break-all;
           white-space: normal;
@@ -71,7 +85,6 @@
   margin: auto;
   @include respond-to(xs, sm) {
     display: none!important;
-    background: red;
   }
   img {
     $diameter: 32px;

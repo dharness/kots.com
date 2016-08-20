@@ -11,6 +11,7 @@
     color: $blue-grey;
     margin-bottom: 40px;
     @include respond-to(xs, sm) {
+      text-align: justify;
       width: 90%;
     }
   }
@@ -35,7 +36,10 @@
       user-select: auto;
       outline: none;
       @include respond-to(xs, sm) {
-        width: 90%!important;
+        width: 95%;
+        margin: auto;
+        box-sizing: border-box;
+        margin-bottom: 20px;
       }
     }
     .message-input {
@@ -48,8 +52,10 @@
       user-select: auto;
       outline: none;
       @include respond-to(xs, sm) {
-        width: 80%!important;
-        margin-left: 10px;
+        width: 95%;
+        margin: auto;
+        box-sizing: border-box;
+        margin-bottom: 40px;
       }
     }
     @include respond-to(xs, sm) {
