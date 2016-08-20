@@ -14,7 +14,7 @@ html
 
   body
     .toast-hole
-    .overflowWrap
+    .overflowWrap(id="home")
       include ./components/nav
       include ./components/hero
       include ./components/about
@@ -29,5 +29,8 @@ html
     onloadCSS( stylesheet, function() {
       console.log( "Stylesheet has loaded." );
       $("body").css("display","block");
+      $(document).ready(function(){
+        $(this).scrollTop(0);
+      });
     });
     loadCSS( "https://fonts.googleapis.com/css?family=Concert+One");
