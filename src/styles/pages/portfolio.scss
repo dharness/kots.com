@@ -2,10 +2,23 @@
   h1 {
     text-align: center;
   }
+  .image-slider {
+    width: 900px;
+    margin: auto;
+    display: flex;
+    @include respond-to(xs, sm) {
+      width: 100%!important;
+    }
+  }
   .blurbs {
-    max-width: 850px;
+    width: 50%;
     margin: auto;
     height: 400px;
+    @include respond-to(xs, sm, md) {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 20px;
+    }
     .blurb {
       transition: opacity 0.2s;
       overflow: hidden;
@@ -28,61 +41,12 @@
       height: 600px;
     }
   }
-  .image-slider {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    width: 90%;
-    height: 400px;
-    $total-width: 850px;
-    $total-height: 250px;
-    @include respond-to(xs, sm) {
-      height: 250px;
-    }
-    * {
-      overflow: hidden!important;
-    }
-    .slick-list.draggable {
-      height: $total-height;
-      width: $total-width;
-    }
-    .images {
-      overflow: hidden;
-      display: flex;
-      flex-direction: row;
-      height: $total-height;
-      width: $total-width;
-      overflow: hidden;
-      .slider-img {
-        user-select: none;
-        display: inline-block;
-        transition: transform .5s;
-        height: $total-height;
-        width: $total-width;
-        @include respond-to(xs, sm) { width: 100%; }
-        p {
-          word-wrap: break-all;
-          white-space: normal;
-          width: 100%;
-        }
-      }
-      @include respond-to(xs, sm) {
-        display: flex;
-        flex-direction: column;
-        overflow: scroll;
-        white-space: wrap;
-      }
-    }
-    @include respond-to(xs, sm) {
-      width: 100%;
-    }
-  }
 }
 
 .slider-arrow {
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: auto 0 auto 0;
   @include respond-to(xs, sm) {
     display: none!important;
   }
@@ -96,5 +60,13 @@
       box-shadow: -3px 1px 5px 0px rgba(219,219,219,0.50);
       transform: scale(1.1);
     }
+  }
+}
+
+.images {
+  width: 700px!important;
+  margin: auto;
+  @include respond-to(xs, sm) {
+    width: 100%!important;
   }
 }
