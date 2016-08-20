@@ -33,7 +33,7 @@
     flex-direction: row;
     margin: auto;
     width: 90%;
-    height: 90%;
+    height: 400px;
     $total-width: 100%;
     $total-height: 100%;
     @include respond-to(xs, sm) {
