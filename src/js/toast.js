@@ -3,4 +3,4 @@
   $('.toast-hole')
     .append($('<p>LEMMONS</p>'))
     .addClass("toast");
-})()
+})();
