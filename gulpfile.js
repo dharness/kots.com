@@ -24,7 +24,6 @@ gulp.task('js', function (cb) {
 });
 
 gulp.task('pug', () => {
-  console.log('puggggg');
   return gulp.src('./src/{index,learn,portfolio}.pug')
     .pipe(pug({}))
     .pipe(gulp.dest(OUT_DIR));
