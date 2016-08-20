@@ -4,13 +4,13 @@ function sendMail(formSelector) {
     var formData = form.serialize();
     $(formSelector + '> .form-el').val('');
     form.removeClass('erorr');
-    showToast();
     $.ajax({
       method: 'POST',
       dataType: 'json',
       data: formData,
       url: 'https://formspree.io/dharness.student@gmail.com',
       success: function(data) {
+        // showToast();
         console.log('Email sent: ' + data);
       },
       error: function(data) {
