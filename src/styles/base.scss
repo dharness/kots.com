@@ -10,6 +10,10 @@ $md-grey: #8492A6;
 body {margin: 0px;}
 * { user-select: none; }
 
+input:not([type=checkbox]):not([type=radio]) {
+  -webkit-appearance: none;
+}
+
 h1, h2, h3, h4, h5 {
   font-family: 'Concert One', cursive;
   color: $blue-dark;
@@ -18,7 +22,7 @@ h1, h2, h3, h4, h5 {
 
 p {
   font-family: FaktSoftPro;
-  font-size: 20px;
+  font-size: 18px;
   color: $blue-dark;
   letter-spacing: 0.69px;
   line-height: 30px;
