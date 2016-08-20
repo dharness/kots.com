@@ -22,16 +22,17 @@
       font-size: 16px;
       letter-spacing: 0.49px;
       line-height: 28px;
-      width: 100%;
+      box-sizing: border-box;
+      padding: 20px;
     }
   }
   .free-quote-button {
     margin: auto;
     margin-bottom: 40px;
-    width: 40%;
+    width: 250px;
     border: none;
     @include respond-to(xs, sm) {
-      width: 100%;
+      width: 50%;
     }
   }
   .closing-title {
@@ -39,10 +40,10 @@
     color: white;
   }
   .input-form {
-    width: 50%;
+    width: 405px;
     margin: auto;
     @include respond-to(xs, sm) {
-      width: 100%;
+      width: 90%;
     }
     textarea, input {
       outline: none;
@@ -96,7 +97,7 @@
   }
   .email-input {
     @extend .ks-input;
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     border: none;
     display: block;
