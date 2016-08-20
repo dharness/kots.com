@@ -1,2 +1,4 @@
 url: https://www.kingofthestack.com
 enforce_ssl: kingofthestack.com
+gems:
+  - jekyll-seo-tag
