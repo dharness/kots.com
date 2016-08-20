@@ -1,3 +1,11 @@
 url: https://www.kingofthestack.com
 enforce_ssl: kingofthestack.com
+gems:
+  - jekyll-seo-tag
+title: King of the Stack - majestic full-stack apps
+description: Get your product to market with our expert developers and designers at King of the Stack - the one-stop, full-stack dev shop!
+facebook:
+  publisher: 1152875448068766
+logo: ./docs/assets/images/king.svg
 future: true
+
