@@ -5,6 +5,8 @@ html
     meta(name="description", content="")
     meta(name="keywords", content="")
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    style.
+      body {display: none;}
   body
     .overflowWrap
       include ./components/nav
@@ -37,6 +39,9 @@ html
       script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
       script(src="main.min.js")
       script.
-        loadCSS( "main.css" );
+        var stylesheet = loadCSS( "main.css" );
+        onloadCSS( stylesheet, function() {
+          console.log( "Stylesheet has loaded." );
+          $("body").css("display","block");
+        });
         loadCSS( "https://fonts.googleapis.com/css?family=Concert+One");
-        loadCSS( "https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css");
