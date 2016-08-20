@@ -36,6 +36,9 @@
         &.tight-letters {
           letter-spacing: -0.4px;
         }
+        @include respond-to(xl) {
+          width: 350px!important;
+        }
       }
     }
     @include respond-to(xs, sm) {
