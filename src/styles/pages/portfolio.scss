@@ -34,8 +34,8 @@
     margin: auto;
     width: 90%;
     height: 400px;
-    $total-width: 100%;
-    $total-height: 100%;
+    $total-width: 850px;
+    $total-height: 400px;
     @include respond-to(xs, sm) {
       height: 250px;
     }
