@@ -57,9 +57,12 @@
     }
   }
   .logo {
-    width: 90%;
+    width: 400px;
     display: block;
     margin: auto;
+    @include respond-to(xs, sm) {
+      width: 90%;
+    }
   }
 }
 
