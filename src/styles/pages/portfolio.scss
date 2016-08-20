@@ -35,7 +35,7 @@
     width: 90%;
     height: 400px;
     $total-width: 850px;
-    $total-height: 100%;
+    $total-height: 250px;
     @include respond-to(xs, sm) {
       height: 250px;
     }
