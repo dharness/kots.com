@@ -7,7 +7,6 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
     link(href='https://fonts.googleapis.com/css?family=Concert+One', rel='stylesheet')
     link(rel='stylesheet', type='text/css', href='//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css')
-    link(rel="stylesheet", href="main.css", type="text/css")
   body
     .overflowWrap
       include ./components/nav
@@ -39,3 +38,5 @@ html
       include ./components/footer
       script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
       script(src="main.min.js")
+      script.
+        loadCSS( "main.css" );
