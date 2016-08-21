@@ -40,8 +40,11 @@ html
       script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
       script(src="main.min.js")
       script.
+        loadCSS( "https://fonts.googleapis.com/css?family=Concert+One");
         var stylesheet = loadCSS( "main.css" );
         onloadCSS( stylesheet, function() {
-          $("body").css("display","block");
+          setInterval(function() {
+            $("body").css("display","block");
+            initSlick();
+          }, 100);
         });
-        loadCSS( "https://fonts.googleapis.com/css?family=Concert+One");
