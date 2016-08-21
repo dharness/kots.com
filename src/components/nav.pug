@@ -6,13 +6,13 @@ nav.ks-nav(id="main-nav")
       li.no-mobile
         a.free-quote-button(href="/#footer", onmouseup="goScroll('#footer')") Free Quote
       li
-        a(href='/#process') process
-      li
         a(href='learn.html') learn
       li
         a(href='portfolio.html') portfolio
-      li
-        a(href='/#about') about
+      //- li
+      //-   a(href='/#process') process
+      //- li
+      //-   a(href='/#about') about
       .hamburger(onclick="toggleNav()")
         img(src="assets/images/hamburger-menu.svg")
       .mobile-button
@@ -26,14 +26,14 @@ nav.ks-nav-strut
         .close-btn(onclick="toggleNav()")
       li.top(onclick="toggleNav(); window.location.href = '/';")
         a(href='/#home', onclick="return toggleNav();") home
-      li.top(onclick="toggleNav(); window.location.href = '/#about';")
-        a(href='/#about', onclick="return toggleNav();") about
+      //- li.top(onclick="toggleNav(); window.location.href = '/#about';")
+      //-   a(href='/#about', onclick="return toggleNav();") about
       li(onclick="toggleNav(); window.location.href = 'portfolio.html';")
         a(href='portfolio.html') portfolio
       li(onclick="toggleNav(); window.location.href = 'learn.html';")
         a(href='learn.html') learn
-      li(onclick="toggleNav(); window.location.href = '/#process';")
-        a(href='/#process', onclick="return toggleNav();") process
+      //- li(onclick="toggleNav(); window.location.href = '/#process';")
+      //-   a(href='/#process', onclick="return toggleNav();") process
       a.free-quote-button(href="/#footer", onclick="toggleNav()") Free Quote
       .pencil-accent
   nav.ks-nav-strut.mobile

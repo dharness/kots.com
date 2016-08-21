@@ -36,6 +36,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(OUT_DIR));
 });
 
-gulp.task('default', ['pug', 'sass', 'js', 'assets'], () => {
+gulp.task('favicon', () => {
+  return gulp.src('./src/favicon.ico')
+    .pipe(gulp.dest(OUT_DIR));
+});
+
+gulp.task('default', ['pug', 'sass', 'js', 'assets', 'favicon'], () => {
   gulp.watch('./src/**/*', ['pug', 'sass', 'js', 'assets']);
 });
