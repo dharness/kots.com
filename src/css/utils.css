@@ -1,0 +1,15 @@
+/**
+ * Used to simplify media queries to align with bootstrap breakpoints
+ * @param  {word} $medias... A list of media types - xs, sm, md, lg, xl
+ */
+@media only screen and (max-width: 480px) {
+  .no-mobile {
+    display: none !important; } }
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .no-mobile {
+    display: none !important; } }
+
+.screen-container {
+  width: 1400px;
+  margin: auto; }

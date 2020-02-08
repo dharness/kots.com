@@ -1,9 +1,6 @@
 function initSlick() {
   var $slider = $('.images')
-  .on('init', function(slick) {
-      console.log('fired!', $('.images'));
-      //$('.images').fadeIn(3000);
-  })
+  .on('init', function(slick) {})
   .slick({
     prevArrow: '#slider-left',
     nextArrow: '#slider-right',
