@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var pug = require('gulp-pug');
-var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var minifyCSS = require('gulp-minify-css');
 var pump = require('pump');
 var autoprefixer = require('gulp-autoprefixer');
 var OUT_DIR = './docs';
@@ -29,10 +29,11 @@ gulp.task('pug', () => {
     .pipe(gulp.dest(OUT_DIR));
 });
 
-gulp.task('sass', function () {
-  return gulp.src('./src/styles/main.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+gulp.task('css', function () {
+  return gulp.src('./src/css/*')
     .pipe(autoprefixer())
+    .pipe(concat('main.css'))
+    .pipe(minifyCSS())
     .pipe(gulp.dest(OUT_DIR));
 });
 
@@ -41,6 +42,6 @@ gulp.task('favicon', () => {
     .pipe(gulp.dest(OUT_DIR));
 });
 
-gulp.task('default', ['pug', 'sass', 'js', 'assets', 'favicon'], () => {
-  gulp.watch('./src/**/*', ['pug', 'sass', 'js', 'assets']);
+gulp.task('default', ['pug', 'css', 'js', 'assets', 'favicon'], () => {
+  gulp.watch('./src/**/*', ['pug', 'css', 'js', 'assets']);
 });
