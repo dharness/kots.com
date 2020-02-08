@@ -24,7 +24,7 @@ gulp.task('js', function (cb) {
 });
 
 gulp.task('pug', () => {
-  return gulp.src('./src/{index,learn,portfolio}.pug')
+  return gulp.src('./src/{index,learn,portfolio,mrmakesaword-privacy-policy}.pug')
     .pipe(pug({}))
     .pipe(gulp.dest(OUT_DIR));
 });
