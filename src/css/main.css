@@ -1116,3 +1116,21 @@ a {
 
 .slick-arrow.slick-hidden {
   display: none; }
+
+.ks-mrmakes-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.ks-mrmakes-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.ks-mrmakes-splash {
+  height: 500px;
+  border-radius: 20px;
+}

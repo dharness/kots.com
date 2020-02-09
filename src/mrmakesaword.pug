@@ -1,0 +1,33 @@
+doctype html
+html
+  head(lang="en")
+    meta(http-equiv="content-type", content="text/html; charset=UTF-8")
+    meta(name="description", content="We are offering free programming mentorship!")
+    meta(name="keywords", content="")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Free Mentorship
+    style.
+      body {display: none;}
+    link(rel="shortcut icon" type="image/x-icon" href="/favicon.ico")
+  body
+    .overflowWrap(id="mrmakesaword")
+      include ./components/nav
+      div(class="ks-mrmakes-content")
+        img(src="assets/images/mrmakesaword/splash.png", class="ks-mrmakes-splash")
+        div(class="ks-mrmakes-details")
+          h2 Mr. Makes-A-Word (iOS)
+          p For inquiries and support contact us at:
+            a(href="mailto:dylan@kingofthestack.com") dylan@kingofthestack.com
+          img(src="assets/images/app-store-badge.svg")
+      include ./components/footer
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+    script(src="main.min.js")
+    script.
+      loadCSS( "https://fonts.googleapis.com/css?family=Concert+One");
+      var stylesheet = loadCSS( "main.css" );
+      onloadCSS( stylesheet, function() {
+        console.log( "Stylesheet has loaded." );
+        setInterval(function() {
+          $("body").css("display","block");
+        }, 200);
+      });
